@@ -1,0 +1,10 @@
+<h1>Calcular IMC</h1>
+<form action="/imc" method="POST">
+  {{#each fields}}
+    <div>
+      <label>{{this.label}}</label>
+      <input type="{{this.type}}" name="{{this.name}}" required>
+    </div>
+  {{/each}}
+  <button type="submit">Calcular</button>
+</form>
