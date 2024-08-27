@@ -37,7 +37,7 @@ export class ImcCalculatorController {
   }
 
   @Post()
-  @Render('imcResultados')
+  @Render('imcResultado')
   calculateImc(@Body() body: { altura: string; peso: string }) {
     const altura = parseFloat(body.altura);
     const peso = parseFloat(body.peso);
