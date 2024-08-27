@@ -28,7 +28,7 @@ export class ImcCalculatorController {
   }
 
   @Get()
-  @Render('imc-form')
+  @Render('imcFormulario')
   showForm() {
     return { fields: [
       { label: 'Altura (em metros):', type: 'number', name: 'altura' },
@@ -37,7 +37,7 @@ export class ImcCalculatorController {
   }
 
   @Post()
-  @Render('imc-result')
+  @Render('imcResultados')
   calculateImc(@Body() body: { altura: string; peso: string }) {
     const altura = parseFloat(body.altura);
     const peso = parseFloat(body.peso);
